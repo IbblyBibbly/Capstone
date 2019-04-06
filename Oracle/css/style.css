@@ -45,6 +45,7 @@
     color: white;
  }
  
+
  .box1 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -72,6 +73,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    
+ }
+
+ .pmtool {
+   fill: blue;
+
  }
  .card {
      margin: 5px;
