@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #003b4d;
+}
+
+h1 {
+    background-color: #f2f2f2;
+    color: white;
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin: auto;
+}
+
+th {
+    background-color: #ED3237;
+    color: white;
+}
+
+tr {
+    color: #003b4d;
+}
+
+tr:nth-child(even) {
+    background-color: #ED3237;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
