@@ -1,45 +1,42 @@
-<?php include("nav.php"); ?>
- aaa ddd 
-
 <?php
-//how to connect to database?
+//ip, user, pass, db
+$con=mysqli_connect("100.64.14.0","root","123","oracle");
 
-
-
-// Query statement. Note the single-quote is a MUST!!
-$query = " SELECT * FROM Project1; " ; 
-
-// Display to verify the correctness of text
-//echo "(Partial) User Name: " . $name ;
-//echo "<br>" ;
-echo "Query Statement: " . $query ;
-//echo "<br><br>" ;
-
-// Set up the connection to MySQL: 
-//     MySQL Server IP, Server username, Server password, Default (starting) database name
-$con=mysqli_connect("128.198.221.71","root","123","oracle");
-
-// Check connection
-if (mysqli_connect_errno())
-{
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-  
-// Execute the query statement and catch the returned result
-$result = mysqli_query($con, $query);
-
-// Display all rows of the returned result
-// NOTE!!! The cursor can ONLY move from the current record to the next record. It 
-//   can NOT move back to a previous record. At least I am not going to teach you
-//   how in this class. :)
-while($row = mysqli_fetch_array($result))
-  {
-  echo $row['user'] . " : " . $row['pswd'] ;
-  echo "<br>";
-  }
-
-// Close the connection to MySQL
-mysqli_close($con);
 ?>
 
+<!DOCTYPE html>
+<html>
+<body>
+    <link href="css/mysql.css" rel = "stylesheet" type = "text/css">   
+    <title>Project One</title>
+    <h1>Project One</h1>
 
+    <table>
+        <tr>
+            <th>Contributions</th> 
+            <th>KmArticles</th> 
+            <th>ODMCEngagements</th>
+            <th>DQCRRCA</th>
+            <!--<th>BestPCustEngagements</th>
+            <th>LongRunning</th>
+            <th>SRQuality</th>
+            <th>AccountSRNRD</th>
+            <th>CriticalWorkSRSNRD</th>
+            -->
+        </tr>
+
+    <?php
+        $sql = "SELECT * FROM project1;";
+        $result = mysqli_query($con, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>" . $row["Contributions"]. "</td><td>" . $row["KmArticles"] . "</td><td>"
+                . $row["ODMCEngagements"]. "</td><td>" . $row["DQCRRCA"];//. "</td></tr>" . $row["BestPCustEngagements"]. "</td></tr>" . $row["LongRunning"]. "</td></tr>"
+               //. $row["SRQuality"]. "</td></tr>" . $row["AccountSRNRD"]. "</td></tr>" . $row["CriticalWorkSRSNRD"]. "</td></tr>";
+        }
+        echo "</table>";
+        }
+    ?>
+</body>
+</html>

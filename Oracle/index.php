@@ -11,7 +11,7 @@
       <div class="box4">
         
           <div class="card" >
-            <div class="card-header">Notifications<hr width="100%", color="black"></div>        
+            <div class="card-header">Email<hr width="100%", color="black"></div>        
             <div class="img">
               <a href="index.php"><img src="images/notifBell.png" alt="Notifications"></a>
             </div>
