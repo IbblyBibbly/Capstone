@@ -1,6 +1,5 @@
 <?php
-//connect to database
-//ip, user, pass, database name
+//ip, user, pass, db
 $con=mysqli_connect("128.198.209.178","root","123","oracle");
 ?>
 
@@ -27,11 +26,11 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
     <?php
     
 $sql = "SELECT * FROM project2";
-$result = mysqli_query($con, $sql); // First parameter is just return of "mysqli_connect()" function
-while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+$result = mysqli_query($con, $sql);
+while ($row = mysqli_fetch_assoc($result)) { 
     echo "<tr>";
-    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
+    foreach ($row as $field => $value) { 
+        echo "<td>" . '<input type="text" name="td" value= "" size="10px">' . "</td>"; 
     }
     echo "</tr>";
 }
