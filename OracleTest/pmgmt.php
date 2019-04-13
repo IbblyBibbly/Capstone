@@ -3,7 +3,7 @@
      <div class="box5">
            <!-- card for project 1-->
           <div class="card" >
-            <div class="card-header">Project1<hr width="100%", color="black"></div>        
+          <div class="card-header"><a href="ManageProject.php" target="_blank">Project 1</a><hr width="100%", color="black"></div>        
             <div class="card-body text">
               <h5 class="card-title">PID: XXXX <br>Project Name:XXXXX</h5>
               <p class="card-text"></p>
@@ -11,7 +11,7 @@
           </div>
            <!-- card for project 2-->
           <div class="card" >
-            <div class="card-header">Project2<hr width="100%", color="black"></div>        
+            <div class="card-header"><a href="ManageProject.php" target="_blank">Project 2</a><hr width="100%", color="black"></div>        
             <div class="card-body text">
               <h5 class="card-title">PID: XXXX <br>Project Name:XXXXX</h5>
               <p class="card-text"></p>
@@ -19,7 +19,7 @@
           </div>
            <!-- card for project 3-->
           <div class="card" >
-            <div class="card-header">Project3<hr width="100%", color="black"></div>        
+            <div class="card-header"><a href="ManageProject.php" target="_blank">Project 3</a><hr width="100%", color="black"></div>        
             <div class="card-body text">
               <h5 class="card-title">PID: XXXX <br>Project Name:XXXXX</h5>
               <p class="card-text"></p>
