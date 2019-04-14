@@ -15,7 +15,7 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
     <div class= "box1">
             <li><a href="ManageProjectInsert.php" target="_blank"><button type="button">Insert</button></a></li>
             <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Update</button></a></li>
-            <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Delete</button></a></li>
+            <li><a href="ManageProjectDelete.php" target="_blank"><button type="button">Delete</button></a></li>
     </div>
   
     <br><br>
@@ -33,6 +33,7 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
             <th>AccountSRNRD</th>
             <th>CriticalWorkSRSNRD</th> 
         </tr>
+
     <?php
     
         $sql = "SELECT * FROM project2";
@@ -43,9 +44,8 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
                 echo "<td>" . $value . '<br> <input type="text" name="td" value= "" size="10px">' . "</td>"; 
             }
             echo "</tr>";
-        }
+            }
         echo "</table>";
-
 
         echo '<br><br>
                 <button class= "updateButton"type="button">Update</button>

@@ -1,6 +1,6 @@
 <?php
 //ip, user, pass, db
-$con=mysqli_connect("128.198.209.178","root","123","oracle");
+$con=mysqli_connect("localhost","root","123","oracle");
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
         <div class= "box1">
             <li><a href="ManageProjectInsert.php" target="_blank"><button type="button">Insert</button></a></li>
             <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Update</button></a></li>
-            <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Delete</button></a></li>
+            <li><a href="ManageProjectDelete.php" target="_blank"><button type="button">Delete</button></a></li>
         </div>
   
     <br><br>
@@ -35,7 +35,7 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
         </tr>
     <?php
     
-        $sql = "SELECT * FROM project2";
+        $sql = "SELECT * FROM project1";
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_assoc($result)) { 
             echo "<tr>";

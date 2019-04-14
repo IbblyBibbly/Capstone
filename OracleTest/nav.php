@@ -14,7 +14,6 @@
                    <li><a href="index.php">Dashboard</a></li>
                    <li><a href="taskcenter.php">Task Center</a></li>
                    <li><a href="pmgmt.php">Project Management</a><li>
-                   <li><a href="ManageProjectRead.php" target="_blank">Manage Project</a></li>
                </ul> 
                <!-- <ul class="projects">
                    <li><font size="5">Projects</font></li>

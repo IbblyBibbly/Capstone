@@ -16,7 +16,7 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
     <div class= "box1">
             <li><a href="ManageProjectInsert.php" target="_blank"><button type="button">Insert</button></a></li>
             <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Update</button></a></li>
-            <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Delete</button></a></li>
+            <li><a href="ManageProjectDelete.php" target="_blank"><button type="button">Delete</button></a></li>
     </div>
 
     <br><br>
@@ -63,7 +63,7 @@ echo "</table>";
 <td> <input type="text" name="CriticalWorkSRSNRD" value= "" size="10px" </td>
 <br>
 </table>
-<a href="index.php"><<button class= "updateButton"type="button">Insert</button></a>
+<a href="insert.php"><button class= "updateButton"type="button">Insert!</button></a>
 
 </form>
 

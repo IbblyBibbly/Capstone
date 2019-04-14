@@ -17,9 +17,10 @@ if (isset($_POST['Button'])) {
     (Contributions, KmArticles,ODMCEngagements, DQCRRCA,BestPCustEngagements, LongRunning,SRQuality, AccountSRNRD, CriticalWorkSRSNRD) 
     VALUES 
     ('$contributions','$KmArticles','$ODMCEngagements','$DQCRRCA', '$BestPCustEngagements','$LongRunning', '$SRQuality', '$AccountSRNRD', '$CriticalWorkSRSNRD')";
- if(mysqli_query($link, $sql)){
+if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
-}else{
+}
+else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 ?>

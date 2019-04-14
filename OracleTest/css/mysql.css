@@ -46,6 +46,7 @@ tr:nth-child(odd) {
     padding-right: 5%;
     display: block;
     margin: auto;
+    list-style-type: none;
 }
 
 .box1 {
@@ -55,6 +56,7 @@ tr:nth-child(odd) {
 
 .box1 > li {
     list-style-type: none;
+    text-decoration: none;
 }
 
 .box1 > li > a > button {
@@ -67,4 +69,5 @@ tr:nth-child(odd) {
     padding-right: 10%;
     display: block;
     margin: auto;
+    text-decoration: none;
 }
