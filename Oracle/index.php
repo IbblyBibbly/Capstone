@@ -9,30 +9,30 @@
      </head>
        <!-- Dashboard Cards -->
       <div class="box4">
-           <!-- Notification Bell Card -->
+           <!-- Notification Bell Card and &nbsp; is a spacer-->
           <div class="card" >
-            <div class="card-header">Email<hr width="100%", color="black"></div>        
+            <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;Email</b><hr width="100%", color="black"></div>        
             <div class="img">
-              <a href="index.php"><img src="images/notifBell.png" alt="Notifications"></a>
+              <a href="https://outlook.live.com/owa/" target="_blank"><img src="images/notifBell.png" alt="Notifications"></a>
             </div>
           </div>
           <!-- Contributions Card -->
           <div class="card" >
-            <div class="card-header">Contributions<hr width="100%", color="black"></div>            
+            <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;Task Center</b><hr width="100%", color="black"></div>            
             <div class="img">
-            <a href="index.php"><img src="images/puzzle.png" alt="Contributions"></a>
+            <a href="taskcenter.php"><img src="images/puzzle.png" alt="Contributions"></a>
             </div>
           </div>
            <!-- Customer Management Card -->
           <div class="card" >
-            <div class="card-header">Customer Management<hr width="100%", color="black"></div>            
+            <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;Project Management</b><hr width="100%", color="black"></div>            
             <div class="img">
-            <a href="index.php"><img src="images/customerRelationship.png" alt="Customer Management"></a>
+            <a href="pmgmt.php"><img src="images/customerRelationship.png" alt="Customer Management"></a>
             </div>
           </div>
              <!-- Training & Development -->
             <div class="card" >
-              <div class="card-header">Training & Development<hr width="100%", color="black"></div>                    
+              <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;Training & Development</b><hr width="100%", color="black"></div>                    
               <div class="img">
               <a href="index.php"><img src="images/training.png" alt="Training & Development"></a>
             </div>
