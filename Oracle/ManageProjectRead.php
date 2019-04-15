@@ -13,9 +13,9 @@
     <br>
 
         <div class= "box1">
-            <button type="button">Insert</button>
-            <button type="button">Update</button>
-            <button type="button">Delete</button>
+            <li><a href="ManageProjectInsert.php" target="_blank"><button type="button">Insert</button></a></li>
+            <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Update</button></a></li>
+            <li><a href="ManageProjectDelete.php" target="_blank"><button type="button">Delete</button></a></li>
         </div>
   
     <br><br>
@@ -40,16 +40,11 @@
         while ($row = mysqli_fetch_assoc($result)) { 
             echo "<tr>";
             foreach ($row as $field => $value) { 
-                echo "<td>" . $value . '<br> <input type="text" name="td" value= "" size="10px">' . "</td>"; 
+                echo "<td>" . $value . "</td>"; 
             }
             echo "</tr>";
         }
         echo "</table>";
-
-
-        echo '<br><br>
-                <button class= "updateButton"type="button">Update</button>
-             '
                
     ?>
 </body>

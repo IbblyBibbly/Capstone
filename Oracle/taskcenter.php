@@ -1,5 +1,5 @@
 <?php include("nav.php"); ?>
-
+         <!-- task list card-->
      <div class="box4">
           <div class="card" >
                <div class="card-header">Tasks<hr width="100%", color="black"></div>        
@@ -9,7 +9,7 @@
                </p>
                </div>
           </div>
-
+                 <!-- New task card/ entry-->
           <div class="card" >
                <div class="card-header">New Task<hr width="100%", color="black"></div>            
                <div class="card-body text-primary">
@@ -17,7 +17,7 @@
                <p class="card-text"></p>
 
 <div class="formbox">  
-
+ <!-- New task uses NewTask.php to insert new tasks to the other card.-->
 <form action:"NewTask.php" method="contact">
     <div>
         <label>DateOfTask</label>
@@ -36,11 +36,9 @@
         <label>Task</label>
         <input type="text"name="Task" placeholder="Task">
     </div>
-   <!-- <div class="button">
-            <input type="button"
-    value="Submit">
-    </div>-->
+
     <br>
+     <!-- Submit button-->
 <input type="button" class="button" value="Submit">
 </form>
 

@@ -22,7 +22,7 @@ echo "<br><br>" ;
 
 // Set up the connection to MySQL: 
 //     MySQL Server IP, Server username, Server password, Default (starting) database name
-$con=mysqli_connect("127.0.0.1","joe","joe123","_joe_smith");
+$con=mysqli_connect("128.198.209.178","root","123","oracle");
 
 // Check connection
 if (mysqli_connect_errno())
