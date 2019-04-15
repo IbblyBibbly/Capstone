@@ -1,6 +1,6 @@
 <?php
 //ip, user, pass, db
-$con=mysqli_connect("128.198.209.178","root","123","oracle");
+$con=mysqli_connect("localhost","root","123","oracle");
 ?>
 
 <!DOCTYPE html>
@@ -36,19 +36,19 @@ $con=mysqli_connect("128.198.209.178","root","123","oracle");
 
     <?php
     
-        $sql = "SELECT * FROM project2";
+        $sql = "SELECT * FROM project1";
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_assoc($result)) { 
             echo "<tr>";
             foreach ($row as $field => $value) { 
-                echo "<td>" . $value . '<br> <input type="text" name="td" value= "" size="10px">' . "</td>"; 
+                echo "<td>" . '<input type="checkbox" name="deleteRow" value="delete">' . $value . "</td>"; 
             }
             echo "</tr>";
             }
         echo "</table>";
 
         echo '<br><br>
-                <button class= "updateButton"type="button">Update</button>
+                <button class= "updateButton"type="button">Delete</button>
              '
                
     ?>

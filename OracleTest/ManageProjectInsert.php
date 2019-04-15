@@ -1,7 +1,7 @@
 <?php
 
 //ip, user, pass, db
-$con=mysqli_connect("128.198.209.178","root","123","oracle");
+$con=mysqli_connect("localhost","root","123","oracle");
 ?>
 
 <!DOCTYPE html>
