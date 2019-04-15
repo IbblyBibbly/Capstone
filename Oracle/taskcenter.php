@@ -3,43 +3,68 @@
      <div class="box4">
           <div class="card" >
                <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;Tasks</b><hr width="100%", color="black"></div>        
-               <div class="card-body text">
-               <h5 class="card-title"></h5>
-               <p class="card-text">This card will list the tasks entered from the New Task card.<br>-Task1<br>-Task2<br>-Task3
-               </p>
-               </div>
+               
+               
+               
+               <?php
+    
+    include_once 'dbhandler.php';
+    
+    ?>
+    <table>
+    <tr>
+        <th>Start Date</th>
+        <th>End Date</th> 
+        <th>Task Description</th>
+        
+    </tr>
+
+<?php
+
+    $sql = "SELECT * FROM taskcenter";
+    $result = mysqli_query($con, $sql);
+//echo "<table>";
+    while ($row = mysqli_fetch_assoc($result)) { 
+     
+        foreach ($row as $field => $value) { 
+            echo "<td>" . "<b>"." ". " $value" . " "."</b>" . "</td>"; 
+          
+        }
+        echo "<tr>";
+    }
+    echo "</table>";
+  
+           
+?>
           </div>
                  <!-- New task card/ entry-->
           <div class="card" >
                <div class="card-header"><b>&nbsp;&nbsp;&nbsp;&nbsp;New Task</b><hr width="100%", color="black"></div>            
-               <div class="card-body text-primary">
+              
                
                
 
-<div class="formbox">  
+     <div class="formbox">  
  <!-- New task uses NewTask.php to insert new tasks to the other card.-->
-<form action:"NewTask.php" method="contact">
+<form action="NewTask.php" method="post">
     <div>
-        <label>Date Of Task:</label>
-        <input type="text" name="DOT" placeholder="Date of Task">
+        <label>Start Date</label>
+        <input type="text" name="StartDate" placeholder="Date of Task">
     </div>
 
     <div>
-        <label>Starting Time:</label>
-        <input type="text" name="Stime" placeholder="Starting Time">
+        <label>End Date</label>
+        <input type="text"name="EndDate" placeholder="Starting Time">
     </div>
+  
     <div>
-        <label>End Time:</label><br>
-        <input type="text" name="Etime" placeholder="End Time">
-    </div>
-    <div>
-        <label>Task:</label>
-        <input type="text" name="Task" placeholder="Task">
+        <label>Task Description</label>
+        <input type="text"name="TaskDesc" placeholder="Task">
     </div>
 
     <br>
      <!-- Submit button-->
-<input type="button" class="button" value="Submit">
+     <input type="submit" value="Submit!">
 </form>
 
 </div>
