@@ -7,15 +7,15 @@
 <html>
 <body>
     <link href="css/mysql.css" rel = "stylesheet" type = "text/css">   
-    <title>Project One</title>
-    <h1>Project One</h1>
+    <title>Project Three</title>
+    <h1>Project Three</h1>
 
     <br>
 
         <div class= "box1">
-            <button type="button">Insert</button>
-            <button type="button">Update</button>
-            <button type="button">Delete</button>
+            <li><a href="ManageProjectInsert3.php" target="_blank"><button type="button">Insert</button></a></li>
+            <li><a href="ManageProjectUpdate3.php" target="_blank"><button type="button">Update</button></a></li>
+            <li><a href="ManageProjectDelete3.php" target="_blank"><button type="button">Delete</button></a></li>
         </div>
   
     <br><br>
@@ -35,21 +35,16 @@
         </tr>
     <?php
     
-        $sql = "SELECT * FROM project1";
+        $sql = "SELECT * FROM project3";
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_assoc($result)) { 
             echo "<tr>";
             foreach ($row as $field => $value) { 
-                echo "<td>" . $value . '<br> <input type="text" name="td" value= "" size="10px">' . "</td>"; 
+                echo "<td>" . $value . "</td>"; 
             }
             echo "</tr>";
         }
         echo "</table>";
-
-
-        echo '<br><br>
-                <button class= "updateButton"type="button">Update</button>
-             '
                
     ?>
 </body>

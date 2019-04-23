@@ -1,22 +1,21 @@
 <?php
     include_once 'dbhandler.php';
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <body>
     <link href="css/mysql.css" rel = "stylesheet" type = "text/css">   
-    <title>Project One</title>
-    <h1>Project One</h1>
+    <title>Project One Delete</title>
+    <h1>Project One Delete</h1>
 
     <br>
 
-        <div class= "box1">
-            <button type="button">Insert</button>
-            <button type="button">Update</button>
-            <button type="button">Delete</button>
-        </div>
+    <div class= "box1">
+            <li><a href="ManageProjectInsert.php" target="_blank"><button type="button">Insert</button></a></li>
+            <li><a href="ManageProjectUpdate.php" target="_blank"><button type="button">Update</button></a></li>
+            <li><a href="ManageProjectDelete.php" target="_blank"><button type="button">Delete</button></a></li>
+    </div>
   
     <br><br>
 
@@ -33,6 +32,7 @@
             <th>AccountSRNRD</th>
             <th>CriticalWorkSRSNRD</th> 
         </tr>
+
     <?php
     
         $sql = "SELECT * FROM project1";
@@ -40,16 +40,28 @@
         while ($row = mysqli_fetch_assoc($result)) { 
             echo "<tr>";
             foreach ($row as $field => $value) { 
-                echo "<td>" . $value . '<br> <input type="text" name="td" value= "" size="10px">' . "</td>"; 
+                //echo "<td>" . '<input type="checkbox" name="deleteRow" value="delete">' . $value . "</td>"; 
+                echo "<td>" . $value . "</td>"; 
             }
             echo "</tr>";
-        }
+            }
         echo "</table>";
+       
+        echo '<br><br>'
 
+    ?>
 
-        echo '<br><br>
-                <button class= "updateButton"type="button">Update</button>
-             '
+<form action="Delete.php" method="post">
+    <?php
+    echo "Table_ID to be deleted."
+    ?>
+    <br>
+<td> <input type="text" name="Table_ID" value= "" size="10px" </td>
+<input type="submit" value="Delete!">
+        </form>
+
+<?php
+
                
     ?>
 </body>
